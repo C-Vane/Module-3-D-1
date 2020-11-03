@@ -139,9 +139,9 @@ const typeOfAngle = (angle) => {
 Create a function to find the index of the greatest element of a given array of integers
 */
 const largestIntIndex = (arr) => {
-  let index,
+  let index = arr[0],
     num = 0;
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 1; i < arr.length; i++) {
     if (arr[i] > num) {
       num = arr[i];
       index = i;
@@ -155,7 +155,7 @@ Create a function to get the largest even number from an array of integers.
 */
 const largestEvenIndex = (arr) => {
   let index,
-    num = 0;
+    num = -Infinity;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] > num && arr[i] % 2 === 0) {
       num = arr[i];
